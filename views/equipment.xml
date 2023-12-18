@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="equipment_form_view" model="ir.ui.view">
+        <field name="name">equipment.form</field>
+        <field name="model">equipment</field>
+        <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="type"/>
+                        <field name="weight"/>
+                        <field name="portable"/>
+                    </group>
+                </group>
+            </sheet>
+        </form>
+<!--            <button string="Print PDF" type="object" class="oe_highlight" name="print_pdf_report"/>-->
+        </field>
+    </record>
+
+    <record id="equipment_form_view_tree" model="ir.ui.view">
+        <field name="name">equipment.tree</field>
+        <field name="model">equipment</field>
+        <field name="arch" type="xml">
+            <tree>
+                        <field name="name"/>
+                        <field name="type"/>
+                        <field name="weight"/>
+                        <field name="portable"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+    <record id="action_equipment" model="ir.actions.act_window">
+          <field name="name">equipment</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">equipment</field>
+          <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_tools"
+          name="tools"
+          parent="menu_operation"
+          action="action_equipment"
+          sequence="10"/>
+
+</odoo>

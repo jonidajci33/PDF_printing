@@ -1,0 +1,9 @@
+<odoo>
+    <report
+    id="report_equipment_card"
+    model="equipment"
+    string="Equipment Report"
+    report_type="qweb-pdf"
+    name="printing_PDF.report_tool"
+    file="printing_PDF.report_tool"/>
+</odoo>
